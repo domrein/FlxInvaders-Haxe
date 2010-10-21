@@ -19,7 +19,6 @@ class AlienImg extends Bitmap{public function new(){super(BitmapData.load("/User
 #end
 
 class Alien extends FlxSprite {
-	
 	var bullets:Array<Dynamic>;			//Reference to the bullets the enemies shoot at you
 	static var bulletIndex:Int;	//Tracker or marker for the bullet list
 	var shotClock:Float;			//A simple timer for deciding when to shoot
@@ -61,7 +60,6 @@ class Alien extends FlxSprite {
 		//If alien has moved too far to the left, reverse direction and increase speed!
 		if(x < originalX - 8)
 		{
-			trace("here");
 			x = originalX - 8;
 			velocity.x = 10;
 			velocity.y++;
